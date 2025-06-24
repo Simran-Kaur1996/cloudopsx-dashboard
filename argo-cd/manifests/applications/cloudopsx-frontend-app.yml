@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cloudopsx-frontend
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Simran-Kaur1996/cloudopsx-dashboard
+    targetRevision: main
+    path: argo-cd/manifests
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

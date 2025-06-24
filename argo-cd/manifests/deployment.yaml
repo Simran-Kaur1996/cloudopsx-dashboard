@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudopsx-frontend
+  labels:
+    app: cloudopsx-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cloudopsx-frontend
+  template:
+    metadata:
+      labels:
+        app: cloudopsx-frontend
+    spec:
+      containers:
+        - name: cloudopsx-frontend
+          image: 121955270316.dkr.ecr.us-east-1.amazonaws.com/cloudopsx-frontend:latest
+          ports:
+            - containerPort: 80

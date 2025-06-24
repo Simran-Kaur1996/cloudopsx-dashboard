@@ -171,3 +171,11 @@ resource "aws_iam_policy_attachment" "apigw_policy_attach" {
 #   policy_arn = aws_iam_policy.cognito_access_policy.arn
 #   roles      = [aws_iam_role.cognito_authenticated_role.name]
 # }
+
+
+# ====================================
+# IAM User for Terraform with ECR Access
+resource "aws_iam_user_policy_attachment" "terraform_user_ecr_access" {
+  user       = var.terraform_iam_user
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess"
+}

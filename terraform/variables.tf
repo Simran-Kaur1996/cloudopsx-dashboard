@@ -39,3 +39,6 @@ variable "db_password" {
   type        = string
   sensitive   = true
 }
+variable "terraform_iam_user" {
+  default = "terraform-user"
+}
