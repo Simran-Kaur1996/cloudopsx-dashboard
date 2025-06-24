@@ -12,13 +12,8 @@
 - 🌐 Ready for **JWT-based Cognito authentication** 
 ---
 ## 🏗️ Architecture
-React (Chart.js)
-↓
-API Gateway → Lambda Functions → DynamoDB
-↓
-Terraform (IaC) + Jenkins + Docker + Amazon ECR
-↓
-EKS (via Helm) + Argo CD (GitOps CD)
+![image](https://github.com/user-attachments/assets/f9c31186-4e0d-46f7-a701-73a8d5da7b82)
+
 ---
 ## 🔧 Tech Stack
 | Layer        | Tools Used |
