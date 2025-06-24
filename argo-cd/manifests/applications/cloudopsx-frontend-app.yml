@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Simran-Kaur1996/cloudopsx-dashboard
     targetRevision: main
-    path: argo-cd/manifests
+    path: argo-cd/manifests/applications
   destination:
     server: https://kubernetes.default.svc
     namespace: default
