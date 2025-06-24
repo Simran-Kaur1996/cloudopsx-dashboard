@@ -1,0 +1,19 @@
+# React & Frontend
+.env*
+node_modules/
+build/
+
+# Terraform
+terraform.tfvars
+.terraform/
+*.tfstate*
+*.pem
+
+# AWS & Keys
+.aws/
+*.key
+*.pem
+*.zip
+
+# Data files
+*.csv
