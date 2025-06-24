@@ -2,11 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   name: cloudopsx-frontend
-  namespace: default
+  labels:
+    app: cloudopsx-frontend
 spec:
   type: LoadBalancer
   selector:
     app: cloudopsx-frontend
   ports:
-    - port: 80
+    - protocol: TCP
+      port: 80
       targetPort: 80
