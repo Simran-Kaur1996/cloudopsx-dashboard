@@ -52,7 +52,7 @@ graph TD
 | Layer             | Tools & Services                                                 |
 |------------------|------------------------------------------------------------------|
 | **Frontend**      | React.js, Chart.js, Tailwind CSS                                 |
-| **Backend**       | AWS Lambda (Node.js), API Gateway                                |
+| **Backend**       | AWS Lambda (python), API Gateway                                |
 | **Database**      | DynamoDB                                                         |
 | **Infrastructure**| Terraform, IAM, VPC, CloudWatch, EKS                             |
 | **CI/CD**         | Jenkins, Docker, ECR, GitHub, Argo CD                            |
