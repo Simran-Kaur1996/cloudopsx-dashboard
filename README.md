@@ -20,7 +20,9 @@ CloudOpsX is a full-stack, cloud-native inventory intelligence platform designed
 
 ## 🖼️ Demo Screenshots
 
-
+| Dashboard Overview | Low Stock Alerts |
+|-------------------|------------------|
+| ![Dashboard](demo/cloudopsx-dashboard.png) | ![Alerts](demo/cloudopsx-alerts.png) |
 
 ---
 
