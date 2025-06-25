@@ -1,36 +1,41 @@
-# 🌩️ CloudOpsX – Intelligent Product Inventory Dashboard
-🚀 A cloud-native inventory monitoring dashboard powered by **AWS**, **Terraform**, **React**, and **Kubernetes (EKS)**.  
-> Built to demonstrate real-world DevOps automation, secure infrastructure-as-code, and serverless analytics for inventory operations.
----
-## 🧠 Features
-- 📊 Real-time product charts using **React + Chart.js**
-- 🧮 Live data from **DynamoDB** via **API Gateway + Lambda**
-- 🛠️ Infrastructure provisioned using **modular Terraform**
-- 🐳 Dockerized frontend deployed to **Amazon EKS** using **Helm**
-- 🔁 CI/CD automation using **Jenkins + Argo CD**
-- 🔐 Secure secrets management using `.env.production`, IAM, and `.gitignore`
-- 🌐 Ready for **JWT-based Cognito authentication** 
----
-## 🏗️ Architecture
-![image](https://github.com/user-attachments/assets/f9c31186-4e0d-46f7-a701-73a8d5da7b82)
+# 🌩️ CloudOpsX – Intelligent Inventory Monitoring Dashboard
+
+CloudOpsX is a full-stack, cloud-native inventory intelligence platform designed to help businesses monitor, analyze, and act on real-time stock data. Built using AWS services, React, and containerized microservices, it delivers a scalable, interactive dashboard with modern DevOps best practices.
+
+> 🎯 Visualize stock trends • Trigger low inventory alerts • Analyze suppliers • All with real-time AWS Lambda APIs and a beautiful React UI.
 
 ---
-## 🔧 Tech Stack
-| Layer        | Tools Used |
-|--------------|------------|
-| Frontend     | React, Chart.js, Axios, Docker |
-| Backend API  | AWS Lambda, API Gateway |
-| Database     | DynamoDB |
-| Infrastructure | Terraform (VPC, IAM, Lambda, EKS) |
-| Deployment   | Jenkins, Helm, Amazon EKS, Argo CD |
-| Container Registry | Amazon ECR |
-| Security     | IAM, `.env.production`, `.gitignore` |
----
-## 📊 Charts Included
 
-- Category-wise Quantity Chart (Bar)
-- Stock Status Breakdown (Pie)
-- Inventory Trends Over Time (Line)
-- Low Stock Visual (Scatter)
-- Cost vs Quantity (Mixed)
+## 🧠 Project Highlights
+
+| Feature | Description |
+|--------|-------------|
+| 📊 Charts & Visuals | 5+ dynamic charts: category bar, stock pie, supplier donut, price vs quantity scatter, inventory trend line |
+| 🧮 Inventory Insights | Stock status tracking with low stock alerts and real-time updates |
+| ⚙️ Fully Cloud-Native | Built on AWS: Lambda, API Gateway, DynamoDB, EKS, S3 |
+| 🚀 CI/CD Automation | Jenkins builds Docker → pushes to ECR → Argo CD auto-deploys to EKS |
+| 🧾 Professional UI | Built with React, Chart.js, and Tailwind CSS for sleek, modern UX |
+
 ---
+
+## 🖼️ Demo Screenshots
+
+
+
+---
+
+## 🧱 Architecture Diagram
+
+```mermaid
+graph TD
+  React[React Frontend]
+  API[API Gateway]
+  Lambda[AWS Lambda Functions]
+  DB[DynamoDB]
+  CI[Jenkins CI/CD]
+  Argo[Argo CD + EKS]
+
+  React -->|API Request| API --> Lambda --> DB
+  CI -->|Build Image| ECR --> Argo
+  Argo -->|Sync Deploy| EKS --> React
+
