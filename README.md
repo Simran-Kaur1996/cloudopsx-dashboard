@@ -25,13 +25,6 @@ CloudOpsX is a full-stack, cloud-native inventory intelligence platform designed
 ## 🧱 Architecture Diagram
 
 ```mermaid
-graph TD
-  React[React Frontend]
-  API[API Gateway]
-  Lambda[AWS Lambda Functions]
-  DB[DynamoDB]
-  CI[Jenkins CI/CD]
-  Argo[Argo CD + EKS]
 
   React -->|API Request| API --> Lambda --> DB
   CI -->|Build Image| ECR --> Argo
