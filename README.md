@@ -37,7 +37,7 @@ graph TD
   CI -->|Build Image| ECR --> Argo
   Argo -->|Sync Deploy| EKS --> React
 
-⚙️ Tech Stack
+##Tech Stack
 Layer	Tools
 Frontend	React.js, Chart.js, Tailwind CSS
 Backend	AWS Lambda (Node.js), API Gateway
