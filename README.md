@@ -6,6 +6,29 @@ Built with the power of **AWS, React, Kubernetes, Terraform, and full CI/CD auto
 
 > 🎯 Real-time data • Serverless APIs • Scalable Infrastructure • CI/CD Automation • Modern UI
 
+## 🧱️ Architecture Diagram
+
+🌐 Frontend
+│
+├── React.js (UI)
+├── Chart.js (Inventory Visualizations)
+└── Hosted on EKS (via Docker + Argo CD)
+
+🔗 API Gateway (REST APIs)
+│
+└── AWS Lambda Functions (Node.js)
+     └── Connected to DynamoDB (Product, Stock, Alerts Tables)
+
+🛠️ CI/CD Pipeline
+│
+├── Jenkins: Build + Push Docker Image to ECR
+├── GitHub: Source + Trigger Update
+└── Argo CD: Auto Sync & Deploy to EKS
+
+☁️ Infrastructure-as-Code
+├── Terraform: VPC, Subnets, EKS, IAM, Lambda, API GW, DynamoDB
+└── IAM: Scoped roles for all services
+
 ---
 
 ## 🧠 Key Features
@@ -25,35 +48,6 @@ Built with the power of **AWS, React, Kubernetes, Terraform, and full CI/CD auto
 ![ChatGPT Image Jun 23, 2025, 06_21_51 PM](https://github.com/user-attachments/assets/27ad684e-ee0c-40c7-9f9b-a26c9884ca2e)
 
 ---
-
-## 🧱️ Architecture Diagram
-
-graph TD
-
-subgraph Frontend Layer
-  A[🌐 React Dashboard] --> B[📊 Chart.js Visuals]
-end
-
-subgraph API Layer
-  C[🚪 API Gateway] --> D[⚙️ AWS Lambda Functions]
-end
-
-subgraph Backend Layer
-  D --> E[(🗃️ DynamoDB)]
-end
-
-subgraph CI/CD Pipeline
-  F[Jenkins] --> G[ECR (Docker Image)]
-  G --> H[GitHub Repo]
-  H --> I[Argo CD]
-end
-
-subgraph Infrastructure
-  I --> J[Kubernetes (EKS Cluster)]
-  J --> A
-end
-
-A --> C
 
 
 ---
