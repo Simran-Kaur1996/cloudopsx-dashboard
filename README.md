@@ -16,7 +16,7 @@ Built with the power of **AWS, React, Kubernetes, Terraform, and full CI/CD auto
 
 🔗 API Gateway (REST APIs)
 │
-└── AWS Lambda Functions (Node.js)
+└── AWS Lambda Functions (python)
      └── Connected to DynamoDB (Product, Stock, Alerts Tables)
 
 🛠️ CI/CD Pipeline
