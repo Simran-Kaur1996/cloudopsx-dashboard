@@ -22,8 +22,9 @@ Built with the power of **AWS, React, Kubernetes, Terraform, and full CI/CD auto
 ---
 
 ## 🖼️ Live Demo (Optional)
+![ChatGPT Image Jun 23, 2025, 06_21_51 PM](https://github.com/user-attachments/assets/27ad684e-ee0c-40c7-9f9b-a26c9884ca2e)
 
-> 🔗 Coming Soon — Deployed on EKS via Argo CD, fronted by an AWS Load Balancer
+
 
 ---
 
