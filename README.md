@@ -24,27 +24,37 @@ Built with the power of **AWS, React, Kubernetes, Terraform, and full CI/CD auto
 ## 🖼️ screenshot
 ![ChatGPT Image Jun 23, 2025, 06_21_51 PM](https://github.com/user-attachments/assets/27ad684e-ee0c-40c7-9f9b-a26c9884ca2e)
 
-
-
 ---
 
 ## 🧱️ Architecture Diagram
 
-```mermaid
 graph TD
-  React[React Frontend]
-  API[API Gateway]
-  Lambda[AWS Lambda Functions]
-  DB[DynamoDB]
-  CI[Jenkins CI/CD]
-  ECR[ECR - Docker Image Repo]
-  Argo[Argo CD]
-  EKS[EKS Cluster]
 
-  React -->|Fetch Data| API --> Lambda --> DB
-  CI -->|Build Docker| ECR --> Argo
-  Argo -->|Sync + Deploy| EKS --> React
-```
+subgraph Frontend Layer
+  A[🌐 React Dashboard] --> B[📊 Chart.js Visuals]
+end
+
+subgraph API Layer
+  C[🚪 API Gateway] --> D[⚙️ AWS Lambda Functions]
+end
+
+subgraph Backend Layer
+  D --> E[(🗃️ DynamoDB)]
+end
+
+subgraph CI/CD Pipeline
+  F[Jenkins] --> G[ECR (Docker Image)]
+  G --> H[GitHub Repo]
+  H --> I[Argo CD]
+end
+
+subgraph Infrastructure
+  I --> J[Kubernetes (EKS Cluster)]
+  J --> A
+end
+
+A --> C
+
 
 ---
 
