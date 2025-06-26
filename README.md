@@ -150,17 +150,4 @@ docker build -t cloudopsx-frontend .
 
 ---
 
-## 🤝 Let's Connect!
 
-💼 This project showcases production-grade experience in:
-- Cloud Architecture
-- DevOps Automation
-- React Frontend Development
-- Serverless APIs & Infrastructure-as-Code
-
-📬 Reach out on [LinkedIn](https://www.linkedin.com/in/Simran-Kaur1996)  
-📁 GitHub Profile: [@Simran-Kaur1996](https://github.com/Simran-Kaur1996)
-
----
-
-> 🌟 **CloudOpsX** isn’t just a dashboard—it's a real-world proof of cloud, frontend, and DevOps mastery.
